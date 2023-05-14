@@ -19,7 +19,7 @@ Function.prototype.myBind = function(...args){
     const obj = this
     params = args.slice(1)
     return function(...args2){
-        obj.apply(name,[...params,...args2])
+        obj.apply(args[0],[...params,...args2])
     }
 }
 
